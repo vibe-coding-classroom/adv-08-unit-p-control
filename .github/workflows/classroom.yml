@@ -1,0 +1,40 @@
+name: GitHub Classroom Workflow
+
+on: [push]
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  build:
+    name: Autograding
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm install
+
+      - name: Control Math Logic
+        id: control-math-logic
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Control Math Logic
+          setup-command: npm install
+          command: npm test
+          timeout: 10
+          max-score: 100
+
+      - name: Autograding Reporter
+        uses: education/autograding-grading-reporter@v1
+        env:
+          CONTROL-MATH-LOGIC_RESULTS: "${{steps.control-math-logic.outputs.result}}"
+        with:
+          runners: control-math-logic

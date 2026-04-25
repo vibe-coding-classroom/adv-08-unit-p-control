@@ -1,0 +1,12 @@
+{
+  "name": "adv-08-unit-p-control",
+  "version": "1.0.0",
+  "description": "P-Control Unit for Advanced Robotics",
+  "main": "controllers/PController.js",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^1.0.0"
+  }
+}
