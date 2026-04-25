@@ -14,14 +14,17 @@ class PController {
      * @returns {number} - The calculated control output (PWM)
      */
     update(error) {
-        // TODO: Implement P control formula: U = Kp * error
-        // TODO: Implement Saturation (Clamping) logic to restrict output within [-limit, limit]
-        
-        // --- STUDENT IMPLEMENTATION START ---
-        
-        return 0; // Placeholder
+        // Calculate proportional output: U = Kp * error
+        let output = error * this.kp;
 
-        // --- STUDENT IMPLEMENTATION END ---
+        // Apply saturation (clamping) logic to restrict output within [-limit, limit]
+        if (output > this.limit) {
+            output = this.limit;
+        } else if (output < -this.limit) {
+            output = -this.limit;
+        }
+
+        return output;
     }
 }
 
