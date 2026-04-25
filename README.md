@@ -1,5 +1,3 @@
-Viewed adv-08-unit-p-control.html:1-372
-
 針對 **`adv-08-unit-p-control` (P 控制)** 單元，這是從「數據計算」邁向「物理控制」的關鍵一步。它要求學員將視覺誤差轉化為馬達指令，並親身體驗控制系統中最經典的權衡：**「反應速度 vs. 系統穩定性」**。
 
 以下是在 **GitHub Classroom** 部署其作業 (Assignments) 的具體建議：
