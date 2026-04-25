@@ -1,4 +1,3 @@
-const { describe, it, expect } = require('vitest');
 const PController = require('../controllers/PController');
 
 describe('P-Controller Math & Logic', () => {

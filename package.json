@@ -4,7 +4,7 @@
   "description": "P-Control Unit for Advanced Robotics",
   "main": "controllers/PController.js",
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run --globals"
   },
   "devDependencies": {
     "vitest": "^1.0.0"
